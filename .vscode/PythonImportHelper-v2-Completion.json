@@ -1,0 +1,54 @@
+[
+    {
+        "label": "HTTPServer",
+        "importPath": "http.server",
+        "description": "http.server",
+        "isExtraImport": true,
+        "detail": "http.server",
+        "documentation": {}
+    },
+    {
+        "label": "BaseHTTPRequestHandler",
+        "importPath": "http.server",
+        "description": "http.server",
+        "isExtraImport": true,
+        "detail": "http.server",
+        "documentation": {}
+    },
+    {
+        "label": "myhandler",
+        "kind": 6,
+        "importPath": "renix",
+        "description": "renix",
+        "peekOfCode": "class myhandler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        print(\"request received\")\n        self.send_response(200)\n        self.send_header('content-type', 'text/html; charset=utf-8')\n        self.end_headers()\n        self.wfile.write(content.encode())\nserver_address = ('',8000)\nhttpd = HTTPServer(server_address,myhandler)\nprint(\"my webserver is running...\")",
+        "detail": "renix",
+        "documentation": {}
+    },
+    {
+        "label": "content",
+        "kind": 5,
+        "importPath": "renix",
+        "description": "renix",
+        "peekOfCode": "content = \"\"\"\n<html>\n    <body>\n        <h1 align=\"center\">ASIN RENIX 24900126</h1>\n           <ol>\n               <li>Device name\tAsin</li>\n              <li>Processor\t12th Gen Intel(R) Core(TM) i5-1235U   1.30 GHz</li>\n              <li>Installed RAM\t16.0 GB (15.7 GB usable)</li>\n              <li>Device ID\tBA9DD6A3-F5F9-4F25-92CB-52F0970DB865</li>\n              <li>Product ID\t00342-42670-33810-AAOEM</li>",
+        "detail": "renix",
+        "documentation": {}
+    },
+    {
+        "label": "server_address",
+        "kind": 5,
+        "importPath": "renix",
+        "description": "renix",
+        "peekOfCode": "server_address = ('',8000)\nhttpd = HTTPServer(server_address,myhandler)\nprint(\"my webserver is running...\")\nhttpd.serve_forever()",
+        "detail": "renix",
+        "documentation": {}
+    },
+    {
+        "label": "httpd",
+        "kind": 5,
+        "importPath": "renix",
+        "description": "renix",
+        "peekOfCode": "httpd = HTTPServer(server_address,myhandler)\nprint(\"my webserver is running...\")\nhttpd.serve_forever()",
+        "detail": "renix",
+        "documentation": {}
+    }
+]
